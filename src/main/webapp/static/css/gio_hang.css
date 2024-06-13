@@ -1,0 +1,142 @@
+#gio-hang .mat-hang {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#gio-hang .mat-hang:not(:first-child) {
+  border-top: solid 1px #ebebeb;
+}
+#gio-hang .mat-hang .hanh-dong form {
+  margin: 0;
+}
+#gio-hang .mat-hang .hanh-dong .chuc-nang span {
+  display: none;
+}
+#gio-hang .mat-hang .hanh-dong button {
+  padding: 0;
+}
+#gio-hang .mat-hang .hanh-dong button::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url("../images/xoa.svg") no-repeat;
+  background-size: contain;
+}
+#gio-hang .mat-hang .anh-san-pham {
+  height: 220px;
+  width: 160px;
+}
+.con-lai {
+  color: var(--mo-ta);
+}
+#gio-hang .mat-hang .anh-san-pham img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#gio-hang .mat-hang .ten-san-pham {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  flex-grow: 1;
+}
+#gio-hang .mat-hang .so-luong {
+  display: flex;
+}
+#gio-hang .mat-hang .so-luong .chuc-nang {
+  padding: 0.7rem;
+  background: #f6f6f6;
+}
+
+#gio-hang .mat-hang .o-nhap-so-luong {
+  width: 3rem;
+  border: none;
+  text-align: center;
+  background: #f6f6f6;
+  outline: none;
+}
+
+#gio-hang .mat-hang .chi-tiet {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+#gio-hang .mat-hang .chi-tiet .ten-san-pham {
+  font-size: 1.4rem;
+}
+#gio-hang .mat-hang .chi-tiet .so-luong,
+#gio-hang .mat-hang .chi-tiet .tien-te {
+  font-size: 1.2rem;
+}
+
+#cac-lien-ket {
+  margin-top: 2rem;
+}
+#cac-lien-ket a {
+  display: flex;
+  align-items: center;
+}
+#cac-lien-ket a .hinh {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 0.75rem;
+}
+#cac-lien-ket a .hinh img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#nut-dat-hang {
+  text-align: center;
+}
+
+#gio-hang > .tong-quan {
+  margin: 1rem;
+  padding: 2rem;
+  background: #f6f6f6;
+  max-width: 350px;
+  margin-left: auto;
+}
+#gio-hang > .tong-quan .muc {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+}
+#gio-hang > .tong-quan .muc :first-child {
+  font-weight: bold;
+}
+#cac-lien-ket a {
+  float: left;
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 720px) {
+  #gio-hang .mat-hang .hanh-dong .chuc-nang {
+    width: 20px;
+    height: 20px;
+  }
+  #gio-hang .mat-hang .chi-tiet {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #gio-hang .mat-hang .ten-san-pham {
+    margin-bottom: 0.7rem;
+  }
+  #gio-hang .mat-hang .anh-san-pham {
+    width: 130px;
+    height: 170px;
+  }
+  #gio-hang {
+    padding: 0.5rem;
+  }
+  #gio-hang .mat-hang {
+    gap: 0.5rem;
+  }
+  #gio-hang > .tong-quan {
+    margin: 1rem 0;
+    max-width: unset;
+  }
+}

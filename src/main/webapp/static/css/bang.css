@@ -1,0 +1,107 @@
+.bang {
+  width: 100%;
+  border-collapse: collapse;
+  border: solid 1px var(--vien);
+}
+.bang th {
+  font-weight: bold;
+  background-color: var(--den);
+  padding: 0.9rem 0.5rem;
+  color: var(--trang);
+}
+.bang thead th:not(:last-child) {
+  border-right: solid 1px var(--den-vua);
+}
+.bang tbody td:not(:last-child) {
+  border-right: dashed 1px var(--vien);
+}
+.bang tbody tr {
+  border-bottom: solid 1px var(--vien);
+}
+.bang tbody td {
+  padding: 0.7rem 0.5rem;
+  font-size: 0.98rem;
+}
+.bang .anh-xem-truoc {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.bang .anh-xem-truoc img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.tuong-tac-bang {
+  margin: 1.5rem 0;
+}
+.tuong-tac-bang .bo-loc {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.tuong-tac-bang .bo-loc .nhieu-lua-chon {
+  display: flex;
+  gap: 1rem;
+}
+.tuong-tac-bang .bo-loc .nhieu-lua-chon label {
+  display: flex;
+  gap: 5px;
+}
+.tuong-tac-bang .loc-du-lieu {
+  display: flex;
+}
+.tuong-tac-bang .phan-trang {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+.tuong-tac-bang .tong-so-trang {
+  margin-left: 4px;
+}
+.tuong-tac-bang .phan-trang .nut-phan-trang {
+  height: 2rem;
+}
+.tuong-tac-bang .phan-trang input[type="number"] {
+  border: solid 1px var(--vien);
+  padding: 0.7rem;
+  width: 3rem;
+  text-align: center;
+  outline: none;
+  margin: 0 6px;
+}
+.tuong-tac-bang .phan-trang input[type="number"]:focus {
+  border-color: transparent;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+}
+.bang .hanh-dong {
+  text-align: center;
+}
+.bang .hanh-dong form {
+  margin: 0;
+}
+.bang .hanh-dong form button, .bang .hanh-dong a {
+  border: solid 1px var(--den);
+  background-color: transparent;
+  text-transform: uppercase;
+  padding-block: 5px 3px;
+  padding-inline: 5px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.bang .hanh-dong form button:hover,
+.bang .hanh-dong a:hover{
+  color: var(--trang);
+  background-color: var(--den);
+}
+.bang td.can-giua {
+  text-align: center;
+}
+.bang td.can-phai {
+  text-align: right;
+}

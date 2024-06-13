@@ -1,0 +1,49 @@
+@keyframes thongBaoLoiTruotLen {
+    0% {
+        transform: translateY(50%);
+    }
+}
+.thong-bao {
+    align-items: stretch;
+    bottom: 3rem;
+    left: 3rem;
+    animation: thongBaoLoiTruotLen 0.15s;
+    display: none;
+}
+.thong-bao .anh {
+    width: 60px;
+}
+.thong-bao .noi-dung {
+    padding: 0.5rem 1rem;
+    max-width: 220px;
+}
+.thong-bao .tieu-de,
+.thong-bao .chi-tiet {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+.thong-bao .tieu-de {
+    font-size: 1rem;
+    margin-bottom: 3px;
+}
+.thong-bao.loi .tieu-de {
+    color: var(--loi);
+}
+.thong-bao .chi-tiet {
+    font-size: 0.95rem;
+    color: var(--mo-ta);
+}
+.thong-bao .anh img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.thong-bao .nut.dong {
+    width: 14px !important;
+    height: 14px !important;
+    opacity: 0.3;
+}
+.thong-bao .nut.dong:hover {
+    opacity: 1;
+}

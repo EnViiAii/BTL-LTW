@@ -1,0 +1,71 @@
+.danh-sach-binh-luan {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.binh-luan {
+    padding: 1rem;
+    box-shadow: 2px 6px 7px -7px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+}
+.khung-binh-luan > .binh-luan {
+    padding-left: 0;
+}
+.binh-luan .thong-tin .ten,
+.binh-luan .thong-tin .thoi-gian {
+    font-weight: bold;
+}
+.binh-luan .noi-dung {
+    padding-block: 0.7rem;
+    text-align: justify;
+}
+.binh-luan + .phan-hoi {
+    margin-left: 2rem;
+}
+.binh-luan .nut-phan-hoi {
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: 0.9rem;
+    color: var(--xanh-la);
+}
+.binh-luan .nut-phan-hoi::before {
+    content: "";
+    width: 0.9rem;
+    height: 0.9rem;
+    background: url("../images/phan_hoi.svg") no-repeat;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+.binh-luan .nut-phan-hoi:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+textarea {
+    border: solid 1px var(--vien);
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    min-height: 100px;
+    outline: none;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 1rem;
+}
+textarea:focus {
+    box-shadow: 1px 1px 7px -2px rgba(0, 0, 0, 0.1);
+    border-color: transparent;
+}
+.binh-luan + .phan-hoi textarea {
+    resize: none;
+}
+.nut.nut-gui-bl {
+    padding: 0.6rem 3rem;
+    margin-block: 0.5rem 1.5rem;
+}
+.khung-binh-luan form.tao-binh-luan .nut-gui-bl {
+    background-color: var(--den);
+}
+.khung-binh-luan form.tao-binh-luan .nut-gui-bl:hover {
+    background-color: var(--xanh-la);
+}	

@@ -1,0 +1,119 @@
+main {
+  padding: 0 var(--le-trang);
+}
+#tieu-de-trang {
+  color: var(--xanh-la);
+  margin-bottom: 2rem;
+}
+#tieu-de-trang .ma-don-hang::before {
+  content: "#";
+}
+#tieu-de-trang .ma-don-hang {
+  color: var(--den);
+}
+#danh-sach-hang-dat > .hang-dat {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-block: 2rem;
+  align-items: center;
+}
+#danh-sach-hang-dat > .hang-dat .chi-tiet-hang-dat {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+#danh-sach-hang-dat > .hang-dat:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.02);
+}
+#danh-sach-hang-dat > .hang-dat .anh {
+  align-self: stretch;
+  width: 150px;
+}
+#danh-sach-hang-dat > .hang-dat .anh img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+#danh-sach-hang-dat > .hang-dat .chi-tiet {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#danh-sach-hang-dat > .hang-dat .chi-tiet .ten-san-pham {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+#danh-sach-hang-dat > .hang-dat .chi-tiet .thanh-tien::before {
+  content: "= ";
+}
+#danh-sach-hang-dat > .hang-dat .so-luong::before {
+  content: "X";
+}
+#danh-sach-hang-dat .diem-danh-gia {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+#danh-sach-hang-dat .form-danh-gia .binh-luan {
+  margin-block: 0.5rem;
+}
+#danh-sach-hang-dat .form-danh-gia .sao {
+  width: 26px;
+  height: 26px;
+  padding: 0 4px;
+}
+#danh-sach-hang-dat .form-danh-gia textarea {
+  border-color: var(--vien);
+  font-family: inherit;
+  font-size: 1rem;
+  height: 90px;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  outline: none;
+}
+#danh-sach-hang-dat .form-danh-gia textarea:focus {
+  border-color: transparent;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.07);
+}
+#danh-sach-hang-dat .form-danh-gia .nut {
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+}
+#danh-sach-hang-dat .form-danh-gia .nut:disabled {
+  background-color: #48cab2 !important;
+}
+
+#thong-tin-don-hang {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+#thong-tin-don-hang .truong {
+  flex-direction: row;
+}
+#thong-tin-don-hang .truong label::after {
+  content: ": ";
+}
+#thong-tin-don-hang .truong span {
+  font-weight: bold;
+}
+
+
+
+@media screen and (max-width: 720px) {
+  #thong-tin-don-hang,
+  #danh-sach-hang-dat > .hang-dat {
+    grid-template-columns: auto;
+    gap: 1rem;
+    border-bottom: solid 1px var(--vien);
+    padding-bottom: 1.25rem;
+  }
+  #danh-sach-hang-dat .form-danh-gia .nut {
+    padding-inline: 1.5rem;
+  }
+}
+
+

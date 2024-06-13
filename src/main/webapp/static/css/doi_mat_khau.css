@@ -1,0 +1,14 @@
+#khung-doi-mat-khau {
+  width: 400px;
+  margin: 0 auto;
+}
+#khung-doi-mat-khau h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 600px) {
+  #khung-doi-mat-khau {
+    padding: 0 var(--le-trang);
+    width: unset;
+  }
+}

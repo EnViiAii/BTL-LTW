@@ -1,0 +1,18 @@
+.hop-thoai {
+  box-shadow: 1px 1px 7px -2px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  background-color: var(--trang);
+  z-index: 110;
+}
+.hop-thoai .nut.dong {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: url("../images/close.svg") no-repeat center;
+  padding: 3px;
+  margin: 0;
+}
+.hop-thoai .nut.dong {
+  max-width: 24px;
+  max-height: 24px;
+}

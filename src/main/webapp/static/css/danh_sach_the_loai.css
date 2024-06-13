@@ -1,0 +1,73 @@
+.danh-sach-the-loai {
+  margin: 0 var(--le-trang) 2rem;
+}
+.danh-sach-the-loai > ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
+.danh-sach-the-loai .the-loai {
+  position: relative;
+}
+.danh-sach-the-loai .anh-the-loai {
+  height: 270px;
+  overflow: hidden;
+  position: relative;
+}
+.danh-sach-the-loai .anh-the-loai::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: 0.1s;
+}
+.danh-sach-the-loai .the-loai:hover .anh-the-loai::after {
+  opacity: 1;
+}
+.danh-sach-the-loai .anh-the-loai img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: 0.2s;
+}
+.danh-sach-the-loai .the-loai:hover .anh-the-loai img {
+  transform: scale(1.2);
+}
+.danh-sach-the-loai .ten-the-loai {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.danh-sach-the-loai .ten-the-loai .ten {
+  display: block;
+  padding: 0.7rem 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  transition: 0.1s;
+}
+.danh-sach-the-loai .ten-the-loai .ten:hover {
+  background: var(--xanh-la-trong-suot);
+  color: var(--trang);
+}
+@media screen and (max-width: 900px) {
+  .danh-sach-the-loai > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 620px) {
+  .danh-sach-the-loai > ul {
+    display: flex;
+    justify-content: left;
+    overflow: auto;
+  }
+  .danh-sach-the-loai .the-loai {
+    min-width: 200px;
+  }
+}

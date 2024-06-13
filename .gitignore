@@ -1,0 +1,31 @@
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# Compiled output
+/bin/
+/build/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Dependencies
+/lib/
+
+# Generated files
+/web/WEB-INF/classes/
+
+# Other generated files
+target/
+
+# IDE-specific files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Environment file
+.env

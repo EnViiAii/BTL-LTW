@@ -1,0 +1,129 @@
+@keyframes menuConTruotRa {
+  0% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes tooltip {
+  0% {
+    opacity: 0.3;
+    transform: translateX(16px);
+  }
+}
+nav {
+  position: relative;
+  float: left;
+  z-index: 100;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#menu {
+  background: var(--den);
+  height: 100%;
+}
+#menu .muc {
+  position: relative;
+}
+#menu .muc.logo {
+  position: relative;
+}
+#menu .muc.logo::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 15%;
+  width: 70%;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+}
+#menu .muc .anh {
+  height: 30px;
+  width: 24px;
+  padding: 1.25rem 1.5rem;
+  transition: background-color 0.05s;
+  cursor: pointer;
+}
+#menu .muc.logo .anh {
+  height: 36px;
+  width: 36px;
+  padding: calc(1.5rem - 6px);
+}
+#menu .muc:not(.logo):hover .anh,
+#menu .muc.hien-tai .anh,
+#menu .muc.duoc-chon .anh {
+  background-color: #5c5c5c;
+}
+#menu .muc .anh img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+#menu .ten-muc {
+  color: var(--trang);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  animation: tooltip 0.1s;
+  display: none;
+}
+#menu .muc:not(.duoc-chon) .anh:hover + .ten-muc {
+  display: flex;
+}
+#menu .ten-muc span {
+  background: var(--den);
+  opacity: 0.95;
+  padding: 0.5rem 1rem;
+  margin-left: 12px;
+  position: relative;
+}
+#menu .ten-muc span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: solid 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-color: transparent var(--den) transparent transparent;
+  right: 100%;
+}
+#menu .menu-con {
+  background: var(--trang);
+  position: fixed;
+  padding: 2rem;
+  width: 200px;
+  left: calc(24px + 1.5rem * 2);
+  top: 0;
+  z-index: -1;
+  height: 100%;
+  box-sizing: border-box;
+  animation: menuConTruotRa 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#menu .muc:not(.duoc-chon) .menu-con {
+  display: none;
+}
+#menu ul.menu-con li {
+  margin-bottom: 1.5rem;
+}
+#menu .menu-con .lien-ket {
+  padding-block: 2px;
+  display: block;
+}
+#menu .menu-con .lien-ket span {
+  padding-bottom: 2px;
+}
+#menu .menu-con .lien-ket:hover {
+  color: var(--xanh-la);
+}
+#nut-dang-xuat {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}

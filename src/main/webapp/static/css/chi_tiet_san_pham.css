@@ -1,0 +1,253 @@
+
+#chi-tiet-san-pham {
+  display: grid;
+  grid-template-columns: minmax(auto, 48%) 1fr;
+  gap: 3rem;
+  padding: 0 var(--le-trang);
+  margin: 4rem 0;
+}
+#chi-tiet-san-pham .anh-san-pham {
+  display: flex;
+  gap: 1.5rem;
+}
+#chi-tiet-san-pham .anh-san-pham img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+#chi-tiet-san-pham .xem-danh-gia {
+	width : 100%;
+	height : 20%;
+	
+}
+#chi-tiet-san-pham .danh-sach-anh ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 550px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#chi-tiet-san-pham .danh-sach-anh ul::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+#chi-tiet-san-pham .danh-sach-anh ul::-webkit-scrollbar-thumb {
+  background: #888;
+}
+#chi-tiet-san-pham .danh-sach-anh .anh {
+  width: 80px;
+  min-height: 100px;
+  position: relative;
+  cursor: pointer;
+}
+#chi-tiet-san-pham .danh-sach-anh .anh::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: solid 2px var(--den);
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 0.1s;
+}
+#chi-tiet-san-pham .danh-sach-anh .anh:hover::after,
+#chi-tiet-san-pham .danh-sach-anh .anh.hien-tai::after {
+  opacity: 1;
+}
+#chi-tiet-san-pham .anh-hien-thi {
+  flex-grow: 1;
+  overflow: hidden;
+}
+#chi-tiet-san-pham .ten-san-pham {
+  font-size: 2.5rem;
+  margin: 0;
+}
+#chi-tiet-san-pham .gia {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+#chi-tiet-san-pham .cac-thuoc-tinh {
+  border-collapse: collapse;
+  margin: 1rem 0 3rem;
+}
+#chi-tiet-san-pham .cac-thuoc-tinh th {
+  font-weight: normal;
+  padding-right: 1rem;
+  text-align: left;
+  padding-block: 0.5rem;
+}
+#chi-tiet-san-pham .cac-thuoc-tinh th::after {
+  content: ":";
+}
+#chi-tiet-san-pham .cac-thuoc-tinh td {
+  font-weight: bold;
+}
+#chi-tiet-san-pham form.them-vao-gio-hang {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+}
+#nut-them-vao-gio-hang {
+  flex-grow: 1;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+#nut-them-vao-gio-hang span {
+  padding-top: 3px;
+}
+#nut-them-vao-gio-hang::before {
+  display: inline-block;
+  content: "";
+  background: url("../images/gio-hang-trang.svg") no-repeat;
+  background-size: contain;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+#chi-tiet-san-pham .thay-doi-so-luong {
+  display: flex;
+  align-items: stretch;
+  background: var(--trang);
+}
+#chi-tiet-san-pham .thay-doi-so-luong * {
+  font-size: 1.2rem;
+}
+#chi-tiet-san-pham .thay-doi-so-luong .so-luong {
+  border: none;
+  padding: 0;
+  text-align: center;
+  width: 3rem;
+  background: transparent;
+  outline: none;
+}
+#chi-tiet-san-pham .thay-doi-so-luong button {
+  background: transparent;
+  border: none;
+  width: 3rem;
+  cursor: pointer;
+}
+#chi-tiet-san-pham .thay-doi-so-luong button:hover {
+  color: var(--xanh-la);
+}
+#chi-tiet-san-pham .chi-tiet {
+  margin-top: 70px;
+  height: 300px;
+  overflow: auto;
+}
+#chi-tiet-san-pham .chi-tiet .phan {
+  margin-bottom: 1.5rem;
+}
+#chi-tiet-san-pham .chi-tiet .tieu-de {
+  margin: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+display: inline-block;
+}
+#chi-tiet-san-pham .chi-tiet .phan.dang-mo .tieu-de {
+  color: var(--xanh-la);
+}
+#chi-tiet-san-pham .chi-tiet .tieu-de::after {
+  content: "";
+  background: url("../images/tro_xuong.svg") no-repeat center;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin-left: 7px;
+  transition: 0.1s;
+}
+#chi-tiet-san-pham .chi-tiet .phan.dang-mo .tieu-de::after {
+  transform: rotate(180deg);
+}
+#chi-tiet-san-pham .chi-tiet .noi-dung {
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /*transition: 0.3s ease-in-out;*/
+  overflow: hidden;
+}
+#chi-tiet-san-pham .chi-tiet .noi-dung > div {
+  margin-top: 1rem;
+  height: 0;
+}
+.cac-danh-gia {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.danh-gia .danh-gia-sao .sao {
+  width: 20px;
+  height: 20px;
+}
+
+#phan-binh-luan {
+  padding: 3rem var(--le-trang);
+}
+
+@media screen and (max-width: 900px) {
+  #chi-tiet-san-pham form.them-vao-gio-hang {
+    gap: 1rem;
+  }
+  #chi-tiet-san-pham .thay-doi-so-luong .so-luong {
+    width: 2.5rem;
+  }
+  #chi-tiet-san-pham {
+    gap: 2rem;
+  }
+  #chi-tiet-san-pham .anh-san-pham {
+    gap: 1rem;
+  }
+  #chi-tiet-san-pham .danh-sach-anh .anh {
+    height: 80px;
+    width: 65px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #chi-tiet-san-pham form.them-vao-gio-hang {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #chi-tiet-san-pham .thay-doi-so-luong .so-luong {
+    flex-grow: 1;
+    height: 3rem;
+  }
+  #chi-tiet-san-pham .thay-doi-so-luong button {
+    width: 4rem;
+  }
+  #chi-tiet-san-pham .anh-san-pham {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+  #chi-tiet-san-pham .danh-sach-anh ul {
+    flex-direction: row;
+    padding-bottom: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  #chi-tiet-san-pham .danh-sach-anh .anh {
+    min-width: 90px;
+    height: 110px;
+  }
+  #chi-tiet-san-pham .anh-hien-thi {
+    aspect-ratio: unset;
+    max-height: 450px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  #chi-tiet-san-pham {
+    display: flex;
+    flex-direction: column;
+  }
+  #chi-tiet-san-pham .chi-tiet {
+    margin-top: 45px;
+    height: unset;
+  }
+  #chi-tiet-san-pham .chi-tiet .tieu-de {
+    font-size: 1.3rem;
+  }
+}
+

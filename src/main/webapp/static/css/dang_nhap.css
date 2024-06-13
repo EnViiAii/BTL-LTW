@@ -1,0 +1,24 @@
+#khung-dang-nhap {
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: center;
+}
+#khung-dang-nhap .mo-ta {
+  text-align: justify;
+}
+#form-dang-nhap {
+  margin-bottom: 1rem;
+}
+#form-dang-nhap .note::before {
+  content: "*";
+}
+#form-dang-nhap .note {
+  color: #fc4545;
+  grid-column: 2 span;
+  text-align: justify;
+}
+@media screen and (max-width: 620px) {
+  #khung-dang-nhap {
+    padding: 0 1rem;
+  }
+}

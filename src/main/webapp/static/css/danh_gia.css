@@ -1,0 +1,11 @@
+.danh-gia .thong-tin-danh-gia {
+    margin: 0.8rem 0;
+}
+.danh-gia .ten-nguoi-danh-gia,
+.danh-gia .thoi-gian-danh-gia {
+    font-weight: bold;
+}
+.danh-gia .noi-dung {
+    margin: 0;
+    text-align: justify;
+}

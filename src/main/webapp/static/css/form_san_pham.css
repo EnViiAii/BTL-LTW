@@ -1,0 +1,8 @@
+#form-san-pham {
+    grid-template-columns: 1fr;
+}
+#form-san-pham .tai-file-anh .giao-dien {
+    max-width: 350px;
+    text-align: center;
+    padding: 1.25rem;
+}

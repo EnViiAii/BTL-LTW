@@ -1,0 +1,126 @@
+:root {
+  --den-dam: #222;
+  --trang-vua: #dbdbdb;
+  --xam: #838383;
+}
+footer {
+  margin-top: 4rem;
+}
+#chan-trang,
+#ban-quyen-trang {
+  background: var(--den-dam);
+  color: var(--xam);
+  padding: 0.8rem var(--le-trang);
+}
+#chan-trang > .phan .tieu-de {
+  color: var(--trang-vua);
+}
+#chan-trang {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 1rem 2rem;
+  padding-block: 1.5rem 2rem;
+}
+#form-dang-ky-thong-bao {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+#chan-trang .phan.dang-ky-nhan-thong-bao .mo-ta {
+  padding: 0.6rem 0;
+  /* margin-bottom: 0; */
+}
+#form-dang-ky-thong-bao input {
+  border-color: transparent transparent var(--trang-vua) transparent;
+  padding-inline: 0;
+  color: var(--trang-vua);
+}
+#form-dang-ky-thong-bao button {
+  background-color: var(--den);
+}
+#form-dang-ky-thong-bao button:hover {
+  background-color: var(--xanh-la);
+}
+#chan-trang .phan ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#chan-trang .phan ul .lien-ket {
+  display: inline-block;
+  padding: 0.6rem 0;
+}
+#chan-trang .phan ul .lien-ket:hover {
+  color: var(--trang-vua);
+}
+#chan-trang .phan.cua-hang .dia-chi {
+  text-align: justify;
+}
+#chan-trang .phan.cua-hang .dia-chi > div {
+  margin-top: 7px;
+}
+#chan-trang .cua-hang .thoi-gian-lam-viec {
+  font-weight: normal;
+}
+#ban-quyen-trang {
+  border-top: solid 1px var(--den);
+}
+#ban-quyen-trang .nha-phat-trien {
+  color: var(--trang-vua);
+}
+
+@media screen and (max-width: 1024px) {
+  #chan-trang .phan.dang-ky-nhan-thong-bao .tieu-de {
+    text-transform: uppercase;
+    font-size: 1.7em;
+    margin-bottom: 0;
+  }
+  #chan-trang .phan.dang-ky-nhan-thong-bao .mo-ta {
+    margin-top: 0;
+  }
+  #ban-quyen-trang {
+    text-align: center;
+  }
+  #chan-trang .tieu-de {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 501px) {
+  #chan-trang {
+    grid-template-columns: 1fr 1fr;
+  }
+  #chan-trang .phan.dang-ky-nhan-thong-bao,
+  #chan-trang .phan.cua-hang {
+    grid-column: 2 span;
+  }
+  #chan-trang .phan.chinh-sach {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #chan-trang {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  #chan-trang > .phan .tieu-de {
+    text-align: center;
+    margin: 0;
+  }
+  #chan-trang > .phan .mo-ta {
+    text-align: center;
+  }
+  #chan-trang > .phan.co-the-mo-rong .tieu-de::after {
+    content: " +";
+  }
+  #chan-trang > .phan .noi-dung {
+    margin-top: 1rem;
+  }
+  #chan-trang > .phan.co-the-mo-rong .noi-dung {
+    display: none;
+  }
+  #chan-trang {
+    padding-block: 2rem;
+  }
+}

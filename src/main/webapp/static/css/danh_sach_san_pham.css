@@ -1,0 +1,121 @@
+.danh-sach-san-pham {
+  margin: 0 var(--le-trang) !important;
+}
+.danh-sach-san-pham {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem 2rem;
+}
+.danh-sach-san-pham .san-pham {
+  overflow: hidden;
+  position: relative;
+}
+.danh-sach-san-pham .san-pham * {
+  text-decoration: none;
+}
+.danh-sach-san-pham .san-pham .danh-gia-sao {
+  margin-top: 4px;
+}
+.danh-sach-san-pham .san-pham .danh-gia-sao .sao {
+  width: 16px;
+  height: 16px;
+}
+.danh-sach-san-pham .anh-san-pham {
+  height: 280px;
+  overflow: hidden;
+}
+.danh-sach-san-pham .anh-san-pham .anh {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.1s;
+}
+.danh-sach-san-pham .anh-san-pham:hover .anh {
+  transform: scale(1.2);
+}
+.danh-sach-san-pham .ten-danh-muc {
+  margin-top: 0.5rem;
+  color: var(--mo-ta);
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+.danh-sach-san-pham .ten-danh-muc:hover {
+  text-decoration: underline;
+}
+.danh-sach-san-pham .ten-san-pham {
+  color: var(--den);
+  display: block;
+  padding: 5px 0;
+  font-size: 1.1rem;
+}
+.danh-sach-san-pham .ten-san-pham:hover {
+  text-decoration: underline;
+}
+.danh-sach-san-pham .san-pham .hanh-dong {
+  display: flex;
+  align-items: stretch;
+  margin-top: 10px;
+}
+.danh-sach-san-pham button.them-gio-hang {
+  border: none;
+  height: 44px;
+  width: 44px;
+  background: var(--xanh-la) url("../images/gio-hang-trang.svg") no-repeat;
+  background-size: 60%;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.1s;
+  color: transparent;
+}
+.danh-sach-san-pham .form-them-gio-hang {
+  margin: 0;
+}
+.danh-sach-san-pham button.them-gio-hang:hover {
+  background-color: var(--den);
+}
+.danh-sach-san-pham .san-pham .gia {
+  font-weight: bold;
+  color: var(--xanh-la);
+  font-size: 1.25rem;
+  position: relative;
+  padding-left: 2rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
+.danh-sach-san-pham .san-pham .gia::before {
+  content: "HẾT HÀNG";
+  color: var(--mo-ta);
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: 0.1s;
+  background: var(--trang);
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+}
+.danh-sach-san-pham .san-pham.het-hang .form-them-gio-hang:hover + .gia::before {
+  transform: translateX(0);
+}
+@media screen and (max-width: 900px) {
+  .danh-sach-san-pham {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .danh-sach-san-pham .anh-san-pham {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .danh-sach-san-pham {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .danh-sach-san-pham .anh-san-pham {
+    height: 240px;
+  }
+}

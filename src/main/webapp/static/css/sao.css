@@ -1,0 +1,24 @@
+.danh-gia-sao {
+    display: flex;
+}
+.danh-gia-sao .sao {
+    width: 24px;
+    height: 24px;
+    padding: 0 3px;
+}
+.danh-gia-sao .sao:first-child {
+    padding-left: 0;
+}
+.danh-gia-sao .sao:last-child {
+    padding-right: 0;
+}
+.danh-gia-cua-toi input {
+    display: none;
+}
+.danh-gia-cua-toi .sao path {
+    fill: #fed418 !important;
+}
+.danh-gia-cua-toi.chua-danh-gia .sao path,
+.danh-gia-cua-toi > .sao.chon ~ .sao path {
+    fill: #ebebeb !important;
+}

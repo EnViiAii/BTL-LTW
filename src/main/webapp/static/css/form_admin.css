@@ -1,0 +1,27 @@
+.form-admin .checkbox-tu-tao {
+  margin: 0;
+}
+.form-admin .truong .thong-bao-loi {
+  grid-column-start: 2;
+}
+.form-admin select {
+  outline: none;
+}
+
+@media screen and (min-width: 620px) {
+  .form-admin .truong {
+    display: grid;
+    grid-template-columns: 120px auto;
+    align-items: center;
+    gap: 0.25rem 1.5rem;
+  }
+  .form-admin .truong > label {
+    text-align: right;
+  }
+  .form-admin .hanh-dong {
+    align-items: center;
+  }
+  .form-admin .hanh-dong .nut {
+    min-width: 150px;
+  }
+}

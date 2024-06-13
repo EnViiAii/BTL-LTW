@@ -1,0 +1,22 @@
+header {
+    margin-bottom: 1rem !important;
+}
+.khung-chua-slide {
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}
+.slide .hanh-dong .nut {
+    font-size: 1.1rem;
+}
+section > .tieu-de,
+section .mo-ta {
+    text-align: center;
+    font-size: 1.1rem;
+}
+section > .tieu-de {
+    font-size: 2rem;
+    margin-block: 4rem 1rem;
+}
+section > .mo-ta {
+    margin-bottom: 2rem;
+}

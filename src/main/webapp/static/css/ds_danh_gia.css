@@ -1,0 +1,9 @@
+ul.cac-danh-gia {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.danh-gia .danh-gia-sao .sao {
+    width: 22px;
+    height: 22px;
+}

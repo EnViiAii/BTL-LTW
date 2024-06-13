@@ -1,0 +1,27 @@
+main {
+    margin: 0 var(--le-trang);
+}
+.thong-tin-san-pham {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+.thong-tin-san-pham .anh {
+    width: 250px;
+    height: 330px;
+}
+.thong-tin-san-pham .anh img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.cac-danh-gia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.danh-gia .danh-gia-sao .sao {
+    width: 22px;
+    height: 22px;
+}

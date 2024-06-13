@@ -1,0 +1,10 @@
+main {
+    padding: 0 var(--le-trang);
+}
+#tieu-de-trang {
+    margin: 0 0 2rem;
+}
+table .danh-sach-san-pham li {
+    font-weight: bold;
+    font-size: 1rem;
+}

@@ -1,0 +1,209 @@
+@keyframes phongTo {
+  0% {
+    transform: scale(0);
+  }
+}
+#thong-tin-dat-hang {
+  padding: 1rem var(--le-trang);
+  display: flex;
+  gap: 2.5rem;
+}
+#thong-tin-dat-hang .thiet-lap-don-hang {
+  flex-grow: 1;
+}
+#thong-tin-dat-hang .thong-tin-gio-hang {
+  flex-basis: 400px;
+  display: flex;
+  flex-direction: column;
+}
+#thong-tin-dat-hang input {
+  text-align: left;
+}
+#thong-tin-dat-hang .phan {
+  margin-bottom: 3rem;
+}
+#thong-tin-dat-hang .phan .tieu-de {
+  margin-top: 0;
+}
+.lua-chon input[type="radio"] {
+  display: none;
+}
+.lua-chon input[type="radio"] + .noi-dung-lua-chon {
+  cursor: pointer;
+}
+.phan.van-chuyen .lua-chon .noi-dung-lua-chon {
+  width: 100px;
+  height: 60px;
+  position: relative;
+  /* border: solid 1.5px transparent;
+  padding: 1rem;
+  transition: border-color 0.1s; */
+}
+.phan.van-chuyen .lua-chon input[type="radio"]:checked + .noi-dung-lua-chon::after {
+  content: "";
+  display: block;
+  background: url("../images/tick.svg") no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  animation: phongTo 0.1s;
+}
+.phan.van-chuyen > .noi-dung > .box-chua {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+}
+.phan.van-chuyen .lua-chon .noi-dung-lua-chon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.15s;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.phan.van-chuyen .lua-chon input:checked + .noi-dung-lua-chon img,
+.phan.van-chuyen .lua-chon:hover .noi-dung-lua-chon img {
+  filter: none;
+  -webkit-filter: none;
+}
+#thong-tin-dat-hang .truong {
+  margin: 1rem 0;
+}
+
+.radio-tuy-chinh {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  background: transparent;
+  border-radius: 50%;
+  color: var(--den-vua);
+  border: solid 2px currentColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phan.thanh-toan > .noi-dung {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.phan.thanh-toan .lua-chon .radio-tuy-chinh::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: currentColor;
+  border-radius: 50%;
+  display: none;
+  animation: phongTo 0.1s;
+}
+.phan.thanh-toan input[type="radio"]:checked + .noi-dung-lua-chon .radio-tuy-chinh {
+  color: var(--xanh-la);
+}
+.phan.thanh-toan input[type="radio"]:checked + .noi-dung-lua-chon .radio-tuy-chinh::after {
+  display: block;
+}
+.phan.thanh-toan .noi-dung-lua-chon {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem;
+}
+.phan.thanh-toan .noi-dung-lua-chon span {
+  flex-grow: 1;
+}
+.phan.thanh-toan .qua-tai-khoan-ngan-hang {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.phan.thanh-toan .ngan-hang-ho-tro {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.phan.thanh-toan .ngan-hang-ho-tro .ngan-hang {
+  width: 80px;
+  height: 40px;
+}
+.phan.thanh-toan .ngan-hang-ho-tro .ngan-hang img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thong-tin-gio-hang .danh-sach-mat-hang {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.thong-tin-gio-hang .mat-hang {
+  display: flex;
+  gap: 1rem;
+}
+.thong-tin-gio-hang .mat-hang .anh-san-pham {
+  width: 70px;
+  height: 85px;
+}
+.thong-tin-gio-hang .mat-hang .anh-san-pham img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.so-luoc-don-hang .muc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+.so-luoc-don-hang .ten-muc {
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.25rem;
+}
+hr.man-dien-thoai {
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+  hr.man-dien-thoai {
+    display: block;
+  }
+  #thong-tin-dat-hang {
+    flex-direction: column;
+  }
+  #thong-tin-dat-hang .thong-tin-gio-hang {
+    flex-basis: auto;
+  }
+  .phan.van-chuyen > .noi-dung > .box-chua {
+    justify-content: center;
+  }
+  .phan.thanh-toan .noi-dung-lua-chon {
+    padding: 0.8rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .phan.thanh-toan .qua-tai-khoan-ngan-hang {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .phan.thanh-toan .noi-dung-lua-chon {
+    align-items: flex-start;
+  }
+  .phan.van-chuyen > .noi-dung > .box-chua {
+    gap: 1rem 3rem;
+  }
+  #thong-tin-dat-hang {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .phan.thanh-toan .ngan-hang-ho-tro {
+    justify-content: center;
+  }
+}
